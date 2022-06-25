@@ -1,0 +1,15 @@
+# Docker file for devlelopment
+FROM node:alpine
+
+# Set our current path in container
+WORKDIR '/app'
+
+# Copy our package.json to prepare our project with the dependencies
+COPY package.json .
+# Run installer
+RUN npm install
+# Copy all files to folder
+COPY . .
+# Start development enviroment
+CMD ["npm", "run", "start"]
+
