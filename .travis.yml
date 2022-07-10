@@ -13,11 +13,11 @@ script:
 deploy:
   provider: elasticbeanstalk
   region: "eu-north-1"
-  app: "reactv2"
-  env: "Reactv2-env"
+  app: "reactv3"
+  env: "Reactv3-env"
   bucket_name: "elasticbeanstalk-eu-north-1-056358467392"
-  bucket_path: "reactv2"
+  bucket_path: "reactv3"
   on:
     branch: master
-  access_key_id: "AKIAQ2HZZ65AIAUVJ537"
-  secret_access_key: "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"
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
