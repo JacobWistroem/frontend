@@ -5,10 +5,10 @@ services:
 
 
 before_install:
-  - docker build -t twizzx/frontend-test -f Dockerfile.dev .
+  - docker build -t twizzx/frontend -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true twizzx/frontend-test npm run test
+  - docker run -e CI=true twizzx/frontend npm run test
 
 deploy:
   provider: elasticbeanstalk
